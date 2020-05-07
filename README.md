@@ -17,16 +17,17 @@ Information retrieval project that is used to retrieve images by describing in w
 ## Step2: 
 ###### Download Word2vec model 
 You can download latest word2vec model or you can follow [link](https://drive.google.com/file/d/1_OSzEyCpyLBHWjwRn47qVIaOugyK60SM/view?usp=sharing "link") to download these pretrained embeddings. 
+
 ######Extract that model file in backend/data folder 
 
 ## Step3:
 #####  Install mongoDB
-######### For linux run the following commands in order 
-    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 68818C72E52529D4
+######### For linux run the following commands in order
+```python
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 68818C72E52529D4
     sudo echo "deb http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
     sudo apt-get update
     sudo apt-get install -y mongodb-org
     sudo systemctl start mongod
     sudo systemctl enable mongod
-    
-	
+```
