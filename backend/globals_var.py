@@ -7,17 +7,18 @@ from nltk.stem import WordNetLemmatizer
 from pymongo import MongoClient
 
 
-
 client = MongoClient('127.0.0.1', 27017)
 db = client.air_project
 
+WORD_VECTOR_PATH = "/home/hmzakpt/xfactor_backend/"
+WORD_VECTOR_NAME = "conceptnet.txt"
 
-if os.path.isfile('/home/hmzakpt/xfactor_backend/model.pik'):
-    model = pickle.load(open("/home/hmzakpt/xfactor_backend/model.pik", "rb"))
+if os.path.isfile(WORD_VECTOR_PATH+'model.pik'):
+    model = pickle.load(open(WORD_VECTOR_PATH+'model.pik', "rb"))
 else:
-    model = gensim.models.KeyedVectors.load_word2vec_format('/home/hmzakpt/xfactor_backend/conceptnet.txt',
+    model = gensim.models.KeyedVectors.load_word2vec_format(WORD_VECTOR_PATH+WORD_VECTOR_NAME,
                                                             binary=False)
-    pickle.dump(model, open("/home/hmzakpt/xfactor_backend/model.pik", "wb"))
+    pickle.dump(model, open(WORD_VECTOR_PATH+'model.pik', "wb"))
 
 
 
