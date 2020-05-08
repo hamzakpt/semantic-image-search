@@ -51,3 +51,7 @@ python3 migrate_dataset.py
 cd backend
 python3 main.py
 ```
+
+## Step 7: 
+#### run ui 
+** go to ui folder in repo and open html file in browser**
