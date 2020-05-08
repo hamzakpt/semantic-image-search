@@ -5,8 +5,10 @@ import gensim
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from pymongo import MongoClient
+import nltk
 
 
+nltk.download('stopwords')
 client = MongoClient('127.0.0.1', 27017)
 db = client.air_project
 
