@@ -35,3 +35,19 @@ You can download latest word2vec model or you can follow [link](https://drive.go
 
 ## Step 4:
 #### Install python Packages
+```python
+sudo python3 -m pip install -r requirements.txt
+```
+
+## Step 5:
+#### Download and migrate database
+```python
+python3 migrate_dataset.py
+```
+
+## Step 6: 
+#### Start the backend server 
+```python
+cd backend
+python3 main.py
+```
