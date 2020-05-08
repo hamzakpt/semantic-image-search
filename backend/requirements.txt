@@ -3,6 +3,7 @@ requests==2.21.0
 numpy==1.13.3
 beautifulsoup4==4.9.0
 cherrypy==18.0.1
+lxml
 gensim==3.8.3
 more_itertools==8.2.0
 nltk==3.5
