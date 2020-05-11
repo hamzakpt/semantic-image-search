@@ -30,7 +30,9 @@ class Api:
     @cherrypy.expose
     @cherrypy.tools.json_in()
     def serve_image(self, image):
+        print("Here :::::")
         image = os.path.abspath(image)
+        print("image: ", image)
         return cherrypy.lib.static.serve_file(image)
 
     @cherrypy.expose
@@ -43,11 +45,11 @@ class Api:
         # Now we have to add entry in database
         # AND refresh the database code to load all text again
         globals_var.images.append(image)
-        globals_var.texts.append(description)
+        globals_var.texts.append(description.strip())
         # Now add in databse
         globals_var.db.images_data.insert({
             "image_path": image,
-            "text": description,
+            "text": description.strip(),
             "category": category
         })
 

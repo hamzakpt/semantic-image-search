@@ -445,7 +445,7 @@ def get_top_images(query, k=5):
     sorted_data = query_data.sort_values("scores", ascending=False).reset_index()
     # Now we have text that is matched
     # Now we have to find the index of text in orginal text
-    score, top_texts = list(sorted_data["scores"])[:k], list(sorted_data["texts"])[:k]
+    score, top_texts = list(sorted_data["scores"]), list(sorted_data["texts"])
     matched_images = []
     for text, sc in zip(top_texts, score):
         index = globals_var.texts.index(text)
