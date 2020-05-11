@@ -10,6 +10,7 @@ import nltk
 
 nltk.download('stopwords')
 nltk.download('punkt')
+nltk.download('wordnet')
 
 client = MongoClient('127.0.0.1', 27017)
 db = client.air_project
