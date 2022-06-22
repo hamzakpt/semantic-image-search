@@ -1,6 +1,6 @@
 scipy==0.19.1
 requests==2.21.0
-numpy==1.13.3
+numpy==1.22.0
 beautifulsoup4==4.9.0
 cherrypy==18.0.1
 lxml
